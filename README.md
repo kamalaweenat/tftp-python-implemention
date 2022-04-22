@@ -4,10 +4,10 @@
 ***What it include?***
 
 
-[TFTP Server](https://github.com/kamalaweenat/tftp-python-implemention/blob/main/server.py): <br>Ruuning the server to handle every client request (put/get request)
+[tftp server](https://github.com/kamalaweenat/tftp-python-implemention/blob/main/server.py): <br>Ruuning the server to handle every client request (put/get request)
 for each request open new thread<br>
 
-[TFTP Client](https://github.com/kamalaweenat/tftp-python-implemention/blob/main/client.py): <br>Sending request to the server either get or put<br>
+[tftp client](https://github.com/kamalaweenat/tftp-python-implemention/blob/main/client.py): <br>Sending request to the server either get or put<br>
 
 [tftp.py](https://github.com/kamalaweenat/tftp-python-implemention/blob/main/tftp.py): <br>Shared modules for both client and servers<br>
 
@@ -19,29 +19,34 @@ for each request open new thread<br>
 * Handle multi-client requests - threads support
 * Verbose mode for printing packet info
 
+<br>
 
 ***Running the server:***
 
-Set the execute permission and run the server
+*Usage:*<br>
+`$ ./server.py [-h] [-p PORT] [-t TIMEOUT] [-c CWD]`
 
-`$ chmod +x *` <br>
+Don't forget to set the execute permission: `$ chmod +x *` <br>
+
+For example:<br>
 `$ sudo ./server.py`
 
 Note: use the sudo privilege to open the port - 69 (this is a system port)
 
-**Options used with the command to run:**
+Options used to run this command:
 
 **-p**: change the port use the <br>
 **-t**: timeout to close the connection use the option<br>
 **-c**: current directory for the server use the option <br>
 
+<br>
+
 ***Running the client:***
 
-usage:
-
+*Usage:*<br>
 `$ ./client.py [-h] [-p PORT] [-t TIMEOUT] [-c CWD] [-b BLKSIZE] [-n TARGETNAME] {get,put} ... host filename`
 
-**Options used with the command to run:**
+Options used to run this command:
 
 **-p**: change the port use the <br>
 **-t**: timeout to close the connection use the option<br>
